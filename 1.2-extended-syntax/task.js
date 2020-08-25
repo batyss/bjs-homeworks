@@ -1,3 +1,4 @@
+"use strict";
 function getResult(a,b,c) {
     let d = b ** 2 - 4*a*c;
     if (d < 0) {
@@ -28,10 +29,11 @@ function getAverageMark(marks) {
 function askDrink(name,dateOfBirthday) {
     let today = new Date();
     let year = today.getFullYear() - dateOfBirthday.getFullYear();
+    let message;
     if (year > 18) {
-      result = `Не желаете ли олд-фэшн, ${name}?`;
+      message = `Не желаете ли олд-фэшн, ${name}?`;
     } else {
-      result = `Сожалею, ${name}, но я не могу вам продать алкоголь. Зато могу предложить вам замечательный клюквенный компот!`;
+      message = `Сожалею, ${name}, но я не могу вам продать алкоголь. Зато могу предложить вам замечательный клюквенный компот!`;
     }
-    return result;
+    return message;
 }
